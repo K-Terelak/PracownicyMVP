@@ -34,12 +34,18 @@ namespace Pracownicy.Model
             List<Employee> list = new List<Employee>();
 
             XmlSerializer xmlSer = new XmlSerializer(typeof(List<Employee>));
-
-            using (FileStream stream = File.Open("employess.xml", FileMode.Open))
+            try
             {
-                list = (List<Employee>)xmlSer.Deserialize(stream);
+                using (FileStream stream = File.Open("employess.xml", FileMode.Open))
+                {
+                    list = (List<Employee>)xmlSer.Deserialize(stream);
+                }
+                _list = list;
             }
-            _list = list;
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("File does not exist");
+            }
         }
 
         private void ClearList()
