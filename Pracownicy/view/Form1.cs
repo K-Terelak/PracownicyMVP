@@ -55,7 +55,6 @@ namespace Pracownicy.View
             {
                 if (value != null)
                 {
-                    Console.WriteLine("Nie null");
 
                     tb_name.Text = value.Name;
                     tb_surname.Text = value.Surname;
