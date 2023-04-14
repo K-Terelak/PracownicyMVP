@@ -220,7 +220,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Stanowsiko:";
+            this.label5.Text = "Stanowisko:";
             // 
             // label4
             // 
