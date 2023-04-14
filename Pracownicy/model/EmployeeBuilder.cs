@@ -19,6 +19,7 @@ namespace Pracownicy.Model
 
         public void SaveToFile()
         {
+            if(_list.Count != 0) { 
             Stream stream = File.OpenWrite("employees.xml");
 
             XmlSerializer xmlSer = new XmlSerializer(typeof(List<Employee>));
@@ -27,6 +28,7 @@ namespace Pracownicy.Model
 
 
             stream.Close();
+                }
         }
 
         public void ReadFromFile()
